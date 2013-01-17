@@ -1,0 +1,6 @@
+check process vsftpd matching vsftpd
+    start program = "/etc/init.d/vsftpd start"
+    stop program  = "/etc/init.d/vsftpd stop"
+    if failed host <%= scope.lookupvar("::fqdn") %> port 21 protocol ftp then restart
+    if 5 restarts within 5 cycles then timeout
+
