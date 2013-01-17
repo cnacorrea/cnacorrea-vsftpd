@@ -1,1 +1,10 @@
 this is an initial commit for my vsftpd puppet module
+
+sample usage:
+
+node sample {
+	class { 'vsftpd':
+		anonymous_enable	=> "YES",
+		local_umask			=> "022",
+	}
+}
