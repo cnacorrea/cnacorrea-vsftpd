@@ -1,3 +1,0 @@
-class vsftpd {
-    include vsftpd::install, vsftpd::config, vsftpd::firewall, vsftpd::service
-}
